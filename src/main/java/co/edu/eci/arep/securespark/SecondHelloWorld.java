@@ -12,7 +12,7 @@ public class SecondHelloWorld {
         port(getPort());
         //API: secure(keystoreFilePath, keystorePassword, truststoreFilePath, truststorePassword);
         secure("target/keystores/ecikeystore2.p12", "123456", null, null);
-        get("/hello", (req, res) -> "Hello World, this is the FIRST Hello World service");
+        get("/hello", (req, res) -> "Hello World, this is the SECOND Hello World service");
         get("/hellosecondservice", (req, res) -> URLReader.main(PATH_FILE, SECOND_SERVICE_URL));
     }
 
